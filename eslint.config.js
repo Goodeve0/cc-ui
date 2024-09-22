@@ -57,7 +57,6 @@ export default tseslint.config({
     "**.md",
     "**/package.json",
     "coverage",
-    "play",
-    "stats.html"
+    "play"
   ]
 });
