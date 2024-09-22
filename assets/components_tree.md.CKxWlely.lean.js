@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.CFQJLYDs.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"components/tree.md","filePath":"components/tree.md","lastUpdated":1727013400000}'),a={name:"components/tree.md"};function r(n,s,c,p,d,m){return o(),t("div")}const f=e(a,[["render",r]]);export{i as __pageData,f as default};
