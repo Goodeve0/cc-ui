@@ -1,13 +1,14 @@
 <template>
   <li>
-    <div class="tree-node">
-      <span class="toggle" @click="toggleOpen">{{ isOpened ? "-" : "+" }}</span>
+    <div class="c-tree-node" @click="toggleOpen">
+      <!-- 使用伪元素显示正三角形 -->
+      <span class="toggle" @click="toggleOpen" :class="{ opened: isOpened }" />
       <label v-if="showCheckbox">
         <input type="checkbox" v-model="localItem.checked" />
       </label>
       {{ localItem.label }}
     </div>
-    <ul v-if="isOpened && localItem.children" class="children">
+    <ul v-if="isOpened && localItem.children" class="c-children">
       <c-tree-node
         v-for="(child, index) in localItem.children"
         :key="index"
@@ -49,21 +50,27 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
-.tree-node {
-  display: flex;
-  align-items: center;
+<style scoped>
+li {
+  list-style: none;
 }
 
 .toggle {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-right: 8px;
+  border-style: solid;
+  border-width: 6px 4px 0 4px; /* 正三角形 */
+  border-color: #909399 transparent transparent transparent;
   cursor: pointer;
-  margin-right: 0.5rem;
-  font-weight: bold;
+  transition: transform 0.2s ease-in-out;
 }
 
-.children {
-  list-style-type: none;
-  padding-left: 1.5rem;
-  margin-top: 0.5rem;
+/* 展开状态，三角形朝下 */
+.toggle.opened {
+  transform: rotate(90deg);
+  border-width: 4px 6px 4px 0;
+  border-color: transparent #909399 transparent transparent;
 }
 </style>

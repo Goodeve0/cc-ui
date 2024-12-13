@@ -1,1 +1,57 @@
 @use "mixins/mixins.scss" as *;
+
+@include b(tree) {
+  list-style-type: none;
+}
+
+@include b(children) {
+  list-style-type: none;
+}
+
+@include b(tree-node) {
+  display: flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 14px;
+  color: #606266; // 默认字体颜色
+  background-color: #fff; // 默认背景颜色
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+
+  // 节点展开/收起的指示图标
+  .toggle {
+    margin-right: 8px;
+    font-size: 12px;
+    color: #c0c4cc;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.3s ease;
+  }
+
+  // 复选框样式
+  input[type="checkbox"] {
+    margin-right: 8px;
+    cursor: pointer;
+    accent-color: #f9a8d4;
+  }
+
+  // 鼠标悬停效果
+  &:hover {
+    background-color: rgba(#f9a8d4, 0.1); // 微妙的粉色悬停效果
+    border-color: #f9a8d4;
+  }
+
+  // 选中状态
+  &.is-selected {
+    background-color: rgba(#f9a8d4, 0.2);
+    border-color: #f9a8d4;
+  }
+
+  // 禁用状态
+  &.is-disabled {
+    color: #c0c4cc;
+    cursor: not-allowed;
+    background-color: #f5f7fa;
+  }
+}

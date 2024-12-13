@@ -1,5 +1,5 @@
 <template>
-  <ul class="tree">
+  <ul class="c-tree">
     <c-tree-node
       v-for="(item, index) in newOptions"
       :key="index"
@@ -10,6 +10,7 @@
 </template>
 
 <script setup lang="ts">
+import "../style/";
 import CTreeNode from "./tree-node.vue";
 import { ref } from "vue";
 
@@ -35,9 +36,3 @@ export default {
   name: "CTree"
 };
 </script>
-<style lang="scss">
-.tree {
-  list-style-type: none;
-  padding-left: 1rem;
-}
-</style>

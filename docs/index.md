@@ -3,15 +3,15 @@ layout: home
 
 hero:
   name: "c-ui"
-  text: "a Vue3 components library"
-  tagline:
+  text: "a components library"
+  tagline: "🚀based on Vue3 + TS"
   image:
     src: /logo.png
     alt: c-ui
   actions:
     - theme: brand
       text: get started
-      link: /guide/install
+      link: /components/quickstart
     - theme: alt
       text: Github
       link: "https://github.com/Goodeve0/cc-ui"

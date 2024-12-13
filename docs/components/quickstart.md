@@ -18,6 +18,8 @@ const app = createApp(App);
 app.use(CUI).mount('#app');
 ```
 
+### 按需引入
+
 # 开始使用
 
 现在你可以启动项目了。 对于每个组件的用法，请参考单个组件对应的文档。

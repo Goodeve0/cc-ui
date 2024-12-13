@@ -11,6 +11,7 @@ export default defineConfig({
   lastUpdated: true,
   themeConfig: {
     nav: [
+      { text: "Home", link: "/" },
       { text: "Guide", link: "/components/install" },
       { text: "Examples", link: "/components/button" }
     ],
@@ -33,7 +34,18 @@ export default defineConfig({
         },
         {
           text: "数据展示",
-          items: [{ text: "Tree树形控件", link: "/components/tree" }]
+          items: [
+            { text: "Tree树形控件", link: "/components/tree" },
+            { text: "Card卡片", link: "/components/card" },
+            { text: "Skeleton 骨架屏", link: "/components/skeleton" }
+          ]
+        },
+        {
+          text: "导航",
+          items: [
+            { text: "Dropdown 下拉菜单", link: "/components/dropdown" },
+            { text: "Backtop 回到顶部", link: "/components/backtop" }
+          ]
         }
       ]
     },

@@ -1,7 +1,7 @@
 # 安装
 
 ::: tip
-该项目基于 Vue3+Vite+TypeScript 参考 Element-Plus 进行开发~
+该项目基于 Vue3+TypeScript 参考 Element-Plus 进行开发~
 :::
 
 ### 版本
