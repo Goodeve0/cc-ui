@@ -1,7 +1,5 @@
 # 快速开始
 
-本节将介绍如何在项目中使用 C UI.
-
 ## 用法
 
 ### 完整引入
@@ -13,13 +11,19 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import CUI from 'c-ui';
-import 'c-ui/es/style.css';
 const app = createApp(App);
 app.use(CUI).mount('#app');
 ```
 
 ### 按需引入
 
-# 开始使用
+```
+// main.ts
+import { createApp } from 'vue';
+import App from './App.vue';
+import { Button } from 'c-ui';
+const app = createApp(App);
+app.use(Button).mount('#app');
+```
 
 现在你可以启动项目了。 对于每个组件的用法，请参考单个组件对应的文档。

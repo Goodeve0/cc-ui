@@ -1,36 +1,10 @@
 <template>
-  <c-button>Default</c-button>
-  <c-button type="primary">Primary</c-button>
-  <c-button type="success">Success</c-button>
-  <c-button type="info">Info</c-button>
-  <c-button type="warning">Warning</c-button>
-  <c-button type="danger">Danger</c-button>
-
-  <br />
-  <br />
-
-  <c-button>按钮默认尺寸</c-button>
-  <c-button size="large">Large</c-button>
-  <c-button size="medium">Medium</c-button>
-  <c-button size="small">Small</c-button>
-  <c-button size="mini">Mini</c-button>
-
-  <br />
-  <br />
-
-  <c-button plain type="primary">朴素按钮</c-button>
-  <c-button round type="primary">椭圆按钮</c-button>
-  <c-button disabled type="primary">椭圆按钮</c-button>
-  <c-button circle type="primary">圆形按钮</c-button>
-
-  <c-tree :options="treeData" />
-
-  <c-card style="width: 300px; height: 100px" />
+  <c-tree :options="treeData" :showCheckbox="showCheckbox" />
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
-
+let showCheckbox = ref(true);
 const treeData = ref([
   {
     label: "一级 1",

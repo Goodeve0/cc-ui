@@ -1,0 +1,55 @@
+@use "mixins/mixins.scss" as *;
+
+@include b(card) {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  box-sizing: border-box;
+
+  &__header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  &__body {
+    font-size: 14px;
+    color: #333;
+  }
+
+  &__footer {
+    margin-top: 12px;
+    text-align: right;
+  }
+
+  &--shadow {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  &--bordered {
+    border: 1px solid #e0e0e0;
+  }
+
+  &--primary {
+    border-left: 4px solid #f9a8d4;
+  }
+
+  &--success {
+    border-left: 4px solid #a1c45a;
+  }
+
+  &--info {
+    border-left: 4px solid #90e0ef;
+  }
+
+  &--warning {
+    border-left: 4px solid #ffe066;
+  }
+
+  &--danger {
+    border-left: 4px solid #e57373;
+  }
+}
