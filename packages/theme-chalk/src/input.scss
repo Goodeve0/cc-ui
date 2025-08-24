@@ -1,0 +1,140 @@
+@import "./common/var.scss";
+@import "./mixins/mixins.scss";
+
+@include b(input) {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: $--font-size-base;
+  line-height: $--input-height;
+  color: $--input-color;
+  background-color: $--input-background-color;
+  border: 1px solid $--input-border-color;
+  border-radius: $--input-border-radius;
+  transition: $--input-transition;
+  box-sizing: border-box;
+
+  &:hover {
+    border-color: $--input-hover-border-color;
+  }
+
+  @include when(focused) {
+    border-color: $--input-focus-border-color;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba($--color-primary, 0.2);
+  }
+
+  @include when(disabled) {
+    background-color: $--input-disabled-background-color;
+    border-color: $--input-disabled-border-color;
+    color: $--input-disabled-color;
+    cursor: not-allowed;
+
+    &::placeholder {
+      color: $--input-disabled-placeholder-color;
+    }
+  }
+
+  @include when(with-prefix) {
+    .c-input__inner {
+      padding-left: 30px;
+    }
+  }
+
+  @include when(with-suffix) {
+    .c-input__inner {
+      padding-right: 30px;
+    }
+  }
+
+  @include m(small) {
+    font-size: $--input-small-font-size;
+    line-height: $--input-small-height;
+
+    .c-input__inner {
+      height: $--input-small-height;
+      line-height: $--input-small-height;
+    }
+  }
+
+  @include m(large) {
+    font-size: $--input-large-font-size;
+    line-height: $--input-large-height;
+
+    .c-input__inner {
+      height: $--input-large-height;
+      line-height: $--input-large-height;
+    }
+  }
+
+  .c-input__inner {
+    display: inline-block;
+    width: 100%;
+    height: $--input-height;
+    line-height: $--input-height;
+    padding: 0 $--input-padding-horizontal;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: inherit;
+    font-size: inherit;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: $--input-placeholder-color;
+    }
+  }
+
+  .c-input__prefix,
+  .c-input__suffix {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 100%;
+    color: $--input-icon-color;
+    font-size: $--input-icon-size;
+    pointer-events: none;
+  }
+
+  .c-input__prefix {
+    left: 0;
+  }
+
+  .c-input__suffix {
+    right: 0;
+  }
+
+  .c-input__clear,
+  .c-input__password-toggle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    color: $--input-icon-color;
+    font-size: $--input-icon-size;
+    cursor: pointer;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $--input-icon-hover-color;
+    }
+  }
+
+  .c-input__word-limit {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-size: $--input-word-limit-font-size;
+    color: $--input-word-limit-color;
+    line-height: 1;
+  }
+} 
