@@ -59,7 +59,7 @@ export const inputProps = {
     default: "default"
   },
   modelValue: {
-    type: [String, Number],
+    type: [String, Number] as PropType<string | number>,
     default: ""
   },
   placeholder: {

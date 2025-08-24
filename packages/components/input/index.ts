@@ -6,4 +6,4 @@ export default CInput;
 
 // 导出类型定义
 export * from "./src/types";
-export * from "./src/interface";
+export * from "./src/interface.d";
