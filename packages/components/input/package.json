@@ -1,0 +1,21 @@
+{
+  "name": "@c-ui/input",
+  "version": "1.0.0",
+  "description": "Input component for C-UI",
+  "main": "index.ts",
+  "module": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./index.ts"
+    }
+  },
+  "dependencies": {
+    "@c-ui/utils": "workspace:*",
+    "@c-ui/theme-chalk": "workspace:*"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  }
+}
