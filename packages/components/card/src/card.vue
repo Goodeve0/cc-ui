@@ -26,7 +26,7 @@
 
 <script setup lang="ts">
 import { computed } from "vue";
-import { cardProps } from "./card";
+import { cardProps } from "./types";
 import "../style/";
 import { StyleValue } from "vue";
 
