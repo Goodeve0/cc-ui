@@ -1,0 +1,1 @@
+import{_ as e,c as t,o}from"./chunks/framework.C3mOm_d4.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"components/form.md","filePath":"components/form.md","lastUpdated":1756381261000}'),a={name:"components/form.md"};function r(n,s,c,m,p,d){return o(),t("div")}const i=e(a,[["render",r]]);export{_ as __pageData,i as default};
