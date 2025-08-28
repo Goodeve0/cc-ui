@@ -1,0 +1,63 @@
+@use "sass:list";
+@use "sass:selector";
+@use "sass:map";
+@use "sass:string";
+
+// Check if the selector should hit all special nesting rules
+@function hitAllSpecialNestRule($selector) {
+  // Check if the selector contains any special nesting patterns
+  // This function determines whether to apply special nesting rules
+  // based on the selector structure
+
+  $selector-str: selector.toString($selector);
+
+  // Check for common special nesting patterns
+  @if str-index($selector-str, "&") != null {
+    @return true;
+  }
+
+  // Check for pseudo-selectors or pseudo-elements
+  @if str-index($selector-str, ":") !=
+    null or
+    str-index($selector-str, "::") !=
+    null
+  {
+    @return true;
+  }
+
+  // Check for attribute selectors
+  @if str-index($selector-str, "[") != null {
+    @return true;
+  }
+
+  // Check for class combinations that might need special handling
+  @if str-index($selector-str, ".") !=
+    null and
+    str-index($selector-str, " ") !=
+    null
+  {
+    @return true;
+  }
+
+  @return false;
+}
+
+// Get CSS variable value
+@function getCssVar($name, $modifier: null, $sub-modifier: null) {
+  @if $sub-modifier {
+    @return var(--#{$name}-#{$modifier}-#{$sub-modifier});
+  } @else if $modifier {
+    @return var(--#{$name}-#{$modifier});
+  } @else {
+    @return var(--#{$name});
+  }
+}
+
+// Get CSS variable name
+@function getCssVarName($name, $modifier: null) {
+  @if $modifier {
+    @return --#{$name}-#{$modifier};
+  } @else {
+    @return --#{$name};
+  }
+}

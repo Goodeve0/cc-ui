@@ -1,0 +1,82 @@
+:root {
+  // Font sizes
+  --font-size-extra-large: 20px;
+  --font-size-large: 18px;
+  --font-size-medium: 16px;
+  --font-size-base: 14px;
+  --font-size-small: 13px;
+  --font-size-extra-small: 12px;
+
+  // Font weights
+  --font-weight-primary: 500;
+  --font-weight-secondary: 400;
+
+  // Text colors
+  --text-color-primary: #303133;
+  --text-color-regular: #606266;
+  --text-color-secondary: #909399;
+  --text-color-placeholder: #c0c4cc;
+  --text-color-disabled: #c0c4cc;
+
+  // Colors
+  --color-primary: #409eff;
+  --color-primary-light-9: #ecf5ff;
+  --color-success: #67c23a;
+  --color-warning: #e6a23c;
+  --color-danger: #f56c6c;
+  --color-error: #f56c6c;
+  --color-info: #909399;
+  --color-info-light-9: #f4f4f5;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  // Border colors
+  --border-color: #dcdfe6;
+  --border-color-light: #e4e7ed;
+  --border-color-lighter: #ebeef5;
+  --border-color-extra-light: #f2f6fc;
+  --border-color-hover: #c0c4cc;
+
+  // Fill colors
+  --fill-color: #f0f2f5;
+  --fill-color-light: #f5f7fa;
+  --fill-color-blank: #ffffff;
+
+  // Border radius
+  --border-radius-base: 4px;
+  --border-radius-small: 2px;
+  --border-radius-circle: 50%;
+
+  // Box shadows
+  --box-shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+
+  // Disabled state variables
+  --disabled-bg-color: #f5f7fa;
+  --disabled-border-color: #e4e7ed;
+  --disabled-text-color: #c0c4cc;
+
+  // Input specific variables
+  --input-small-font-size: 12px;
+  --input-large-font-size: 16px;
+  --input-icon-size: 16px;
+  --input-word-limit-font-size: 12px;
+
+  // Input component variables
+  --input-height: 32px;
+  --input-small-height: 24px;
+  --input-large-height: 40px;
+  --input-text-color: #606266;
+  --input-bg-color: #ffffff;
+  --input-border-color: #dcdfe6;
+  --input-border-radius: 4px;
+  --input-hover-border-color: #c0c4cc;
+  --input-focus-border-color: #409eff;
+  --input-disabled-bg-color: #f5f7fa;
+  --input-disabled-border-color: #e4e7ed;
+  --input-disabled-text-color: #c0c4cc;
+  --input-disabled-placeholder-color: #c0c4cc;
+  --input-padding-horizontal: 12px;
+  --input-placeholder-color: #c0c4cc;
+  --input-icon-hover-color: #c0c4cc;
+  --input-word-limit-color: #909399;
+}
